@@ -6,6 +6,10 @@
 
 - PBVS 2026 - Thermal Image Super-Resolution (TISR) challenge - Track1  
 ([dataset download](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBcThtRnRKVGJ6RnRnYzUxRUhTcG84RHBURHJ1c2c%5FZT1VYURTOTE&cid=6D316F53D21626AF&id=6D316F53D21626AF%2126485&parId=6D316F53D21626AF%2126239&o=OneUp) 을 통해 데이터셋을 다운받을 수 있습니다.)
+- PBVS 데이터를 가지고 LR_x4 데이터셋을 만들었습니다.
+```python
+img = F.interpolate(img, scale_factor=0.25, mode='bicubic')
+```
 
 ## Reference Papers & Resources
 
