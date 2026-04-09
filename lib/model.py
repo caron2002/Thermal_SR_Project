@@ -176,9 +176,9 @@ class LDASRNet(nn.Module):
         self.FRec_Block_x8 = FRecBlock_x8(out_channels)
         
     def forward(self, x):
-        with torch.no_grad():
-            origin_x = x
-            base = F.interpolate(origin_x, scale_factor=8, mode='bilinear')
+        
+        origin_x = x
+        base = F.interpolate(origin_x, scale_factor=8, mode='bilinear')
 
         x = self.Shallow_Feature_Extractor(x)
         x = self.DABs(x)
